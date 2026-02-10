@@ -196,7 +196,7 @@ contactForm.addEventListener('submit', function(e) {
         `*Mensagem:* ${encodeURIComponent(message)}`;
     
     // Abre o WhatsApp com a mensagem
-    const whatsappNumber = '5563999999999'; // SUBSTITUIR pelo número real
+    const whatsappNumber = '5563984672057'; // SUBSTITUIR pelo número real
     window.open(`https://wa.me/${whatsappNumber}?text=${whatsappMessage}`, '_blank');
     
     // Limpa o formulário

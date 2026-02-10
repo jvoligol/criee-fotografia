@@ -58,7 +58,7 @@ img {
 }
 
 .navbar {
-    padding: 15px 0;
+    padding: 20px 0;
 }
 
 .nav-container {
@@ -70,8 +70,23 @@ img {
     align-items: center;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    height: 80px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.logo-image:hover {
+    transform: scale(1.05);
+}
+
 .logo img {
-    height: 60px;
+    height: 80px;
     width: auto;
 }
 
@@ -720,6 +735,10 @@ img {
         padding: 30px 0;
         gap: 0;
     }
+    
+    .logo-image {
+        height: 60px;
+    }
 
     .nav-menu li {
         padding: 15px 0;
@@ -939,4 +958,106 @@ img {
     .service-title {
         font-size: 1.4rem;
     }
+}
+/* ============================================
+   BOTÕES FLUTUANTES - WhatsApp e Instagram
+   ============================================ */
+.floating-buttons {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 9999;
+}
+
+.floating-whatsapp,
+.floating-instagram {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    animation: float 3s ease-in-out infinite;
+}
+
+.floating-whatsapp {
+    background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+}
+
+.floating-instagram {
+    background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.floating-whatsapp:hover,
+.floating-instagram:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.floating-whatsapp:hover {
+    background: linear-gradient(135deg, #128c7e 0%, #075e54 100%);
+}
+
+.floating-instagram:hover {
+    background: linear-gradient(135deg, #bc1888 0%, #8a3ab9 100%);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Responsivo para mobile */
+@media (max-width: 768px) {
+    .floating-buttons {
+        bottom: 20px;
+        right: 20px;
+        gap: 12px;
+    }
+    
+    .floating-whatsapp,
+    .floating-instagram {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .floating-whatsapp svg,
+    .floating-instagram svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+/* ============================================
+   CRÉDITOS DO DESENVOLVEDOR NO FOOTER
+   ============================================ */
+.developer-credits {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.developer-credits a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.developer-credits a:hover {
+    color: #fff;
+    text-decoration: underline;
 }
