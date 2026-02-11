@@ -1074,3 +1074,6 @@ img {
     color: #fff;
     text-decoration: underline;
 }
+html {
+    scroll-padding-top: 80px; /* Ajuste para a altura do cabeçalho fixo */
+}

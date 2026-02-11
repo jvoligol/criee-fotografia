@@ -317,3 +317,24 @@ document.addEventListener('keydown', (e) => {
 
 console.log('Criee Fotografia - Site carregado com sucesso!');
 console.log('Galerias inicializadas: ', document.querySelectorAll('.gallery-container').length);
+// Seleciona o botão "scroll-top"
+const scrollTopButton = document.querySelector('.scroll-top');
+
+// Adiciona um evento de clique ao botão
+scrollTopButton.addEventListener('click', function (event) {
+    event.preventDefault(); // Evita comportamento padrão
+    window.scrollTo({ top: 0, behavior: 'smooth' }); // Rola suavemente para o topo
+});
+// Adiciona rolagem suave para todos os links de âncora
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+        }
+    });
+});
