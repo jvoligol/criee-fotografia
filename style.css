@@ -58,7 +58,7 @@ img {
 }
 
 .navbar {
-    padding: 20px 0;
+    padding: 12px 0;
 }
 
 .nav-container {
@@ -76,7 +76,7 @@ img {
 }
 
 .logo-image {
-    height: 80px;
+    height: 60px;
     width: auto;
     transition: var(--transition);
 }
@@ -86,7 +86,7 @@ img {
 }
 
 .logo img {
-    height: 80px;
+    height: 60px;
     width: auto;
 }
 
@@ -147,7 +147,7 @@ img {
    HERO SLIDER - OTIMIZADO PARA MOBILE
    ============================================ */
 .hero-slider {
-    margin-top: 90px;
+    margin-top: 70px;
     position: relative;
     height: 70vh;
     min-height: 400px;
@@ -726,7 +726,7 @@ img {
     .nav-menu {
         position: fixed;
         left: -100%;
-        top: 90px;
+        top: 66px; /* Ajustado para o header menor */
         flex-direction: column;
         background-color: var(--secondary-color);
         width: 100%;
@@ -737,7 +737,7 @@ img {
     }
     
     .logo-image {
-        height: 60px;
+        height: 50px;
     }
 
     .nav-menu li {
@@ -773,12 +773,25 @@ img {
 
 /* Mobile - OTIMIZAÇÕES CRÍTICAS */
 @media (max-width: 600px) {
+    /* Header mais compacto no mobile */
+    .navbar {
+        padding: 8px 0;
+    }
+    
+    .logo-image {
+        height: 50px !important;
+    }
+    
+    .logo img {
+        height: 50px !important;
+    }
+    
     /* Hero otimizado para mobile */
     .hero-slider {
         height: 60vh;
         min-height: 350px;
         max-height: 500px;
-        margin-top: 80px;
+        margin-top: 66px; /* Ajustado para o header menor */
     }
 
     .slider-controls {
